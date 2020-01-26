@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 function getCollatzSequence(firstNumber) {
     let x = firstNumber;
+    if (typeof x != 'number' || (x < 1) || (x % 1 !== 0) ) {
+        throw new TypeError('getCollatzSequence requires postive whole number');
+    };    
     let outputArr = [ x ];
     while (typeof x == 'number' && x !== 1) {
         if ((x % 2) === 1) {
