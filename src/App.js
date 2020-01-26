@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+function getCollatzSequence(firstNumber) {
+    let x = firstNumber;
+    let outputArr = [ x ];
+    while (typeof x == 'number' && x !== 1) {
+        if ((x % 2) === 1) {
+            x = 3*x + 1;
+        } else {
+            x = x/2;
+        };
+        outputArr.push(x);
+    };
+    return outputArr;
+};
+
 class Collatz extends Component {
     constructor(props) {
         super(props);
 
         let x = this.props.number;
-        let outputArr = [ x ];
-        while (typeof x == 'number' && x !== 1) {
-            if ((x % 2) === 1) {
-                x = 3*x + 1;
-            } else {
-                x = x/2;
-            };
-            outputArr.push(x);
-        };
-        this.outputArr = outputArr;
+        this.outputArr = getCollatzSequence(x);
     }
 
     render() {
@@ -94,3 +99,4 @@ class App extends Component {
 }
     
 export default App;
+export { getCollatzSequence, Collatz, App };
