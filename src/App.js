@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
 class Collatz extends Component {
-    render() {
-        const { number } = this.props;
-        
-        // WARNING: This code reruns with every rendering
-        let x = number;
+    constructor(props) {
+        super(props);
+
+        let x = this.props.number;
         let outputString = x.toString();
         while (typeof x == 'number' && x !== 1) {
             if ((x % 2) === 1) {
@@ -15,6 +14,12 @@ class Collatz extends Component {
             };
             outputString += ' ' + x;
         };
+        this.outputString = outputString;
+    }
+
+    render() {
+        const { number } = this.props;
+        const outputString = this.outputString;
         
         return (
             <div className="Collatz">              
