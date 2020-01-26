@@ -36,7 +36,7 @@ class Collatz extends Component {
               <ul>
                 { outputArr.map( (x,ind) => {
                     return <SpecialListItem
-                             listStyleType="disc"
+                             listStyleType="none"
                              key={ ind }>
                              { x }
                            </SpecialListItem>; } ) }

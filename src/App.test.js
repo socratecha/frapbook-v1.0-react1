@@ -39,3 +39,12 @@ it('checks Collatz bold list style with test renderer', () => {
     expect(collatz.children[1].children[2]).toHaveStyleRule(
         'font-weight', 'bold');
 });
+
+// Creating snapshot test of rendered items
+it('snapshots Collatz with test renderer', () => {
+    const collatz = renderer.create(<Collatz number={ 13 } />)
+
+    // possible component interaction here
+    let tree = collatz.toJSON();
+    expect(tree).toMatchSnapshot();
+});

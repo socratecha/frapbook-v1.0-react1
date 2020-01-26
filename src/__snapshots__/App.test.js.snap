@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots Collatz with test renderer 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 90%;
+  padding: 2px;
+  list-style-type: none;
+}
+
+<div
+  className="Collatz"
+>
+  <h2>
+    Collatz Sequence for 
+    13
+  </h2>
+  <ul>
+    <li
+      className="c0"
+    >
+      13
+    </li>
+    <li
+      className="c0"
+    >
+      40
+    </li>
+    <li
+      className="c0"
+    >
+      20
+    </li>
+    <li
+      className="c0"
+    >
+      10
+    </li>
+    <li
+      className="c0"
+    >
+      5
+    </li>
+    <li
+      className="c0"
+    >
+      16
+    </li>
+    <li
+      className="c0"
+    >
+      8
+    </li>
+    <li
+      className="c0"
+    >
+      4
+    </li>
+    <li
+      className="c0"
+    >
+      2
+    </li>
+    <li
+      className="c0"
+    >
+      1
+    </li>
+  </ul>
+</div>
+`;
