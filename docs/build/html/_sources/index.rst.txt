@@ -54,3 +54,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Styling
+=======
+`Storybook stylesheet <_static/storybook-static/index.html>`_
+
